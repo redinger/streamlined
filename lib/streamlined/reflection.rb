@@ -67,7 +67,7 @@ module Streamlined::Reflection
       else
         [:select, :name]
       end
-    when :has_many, :has_and_belongs_to_many
+    when :has_many, :has_and_belongs_to_many, :has_many_polymorphs
       if assoc.options[:polymorphic]
         [:polymorphic_membership, :count]
       else

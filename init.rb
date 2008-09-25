@@ -1,5 +1,5 @@
-if defined?(Dependencies)
-  Dependencies.load_paths.unshift("#{RAILS_ROOT}/app/streamlined")
+if defined?(ActiveRecord::Dependencies)
+  ActiveRecord::Dependencies.load_paths.unshift("#{RAILS_ROOT}/app/streamlined")
 end
 
 require 'extensions/array_conversions'

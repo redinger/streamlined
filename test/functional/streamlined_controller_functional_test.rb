@@ -99,7 +99,7 @@ describe "StreamlinedController" do
   end
   
   # TODO: set Content-Disposition? optional?
-  # @headers["Content-Disposition"] = "attachment; filename=\"#{Inflector.tableize(model_name)}_#{Time.now.strftime('%Y%m%d')}.csv\""
+  # @headers["Content-Disposition"] = "attachment; filename=\"#{ActiveSupport::Inflector.tableize(model_name)}_#{Time.now.strftime('%Y%m%d')}.csv\""
   it "list xml" do
     @request.env["HTTP_ACCEPT"] = "application/xml"
     get :list, {:format => "xml", :full_download => "true"}
